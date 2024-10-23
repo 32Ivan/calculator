@@ -18,29 +18,31 @@ public class Primjer14 {
             lista.add(scanner.nextInt());
         }
 
-        int brojPonavljanja = 1;
-        boolean b = false;
 
-        for (int i = 0; i < lista.size(); i++) {
-            int trenutniBroj = lista.get(i);
-            int brojIstihBrojeva = 0;
+        int minNum = lista.get(0);
+        int maxNum = lista.get(0);
 
-            for (Integer integer : lista) {
-
-                if (integer.equals(trenutniBroj)) {
-                    brojIstihBrojeva++;
-                }
-
-
+        for (int i = 1; i < lista.size(); i++) {
+            if (lista.get(i) < minNum) {
+                minNum = lista.get(i);
             }
-            if (brojIstihBrojeva > brojPonavljanja) {
-                brojPonavljanja = brojIstihBrojeva;
-                b = true;
+            if (lista.get(i) > maxNum) {
+                maxNum = lista.get(i);
             }
-
-
         }
+        int finalMaxNum = maxNum;
+        int finalMinNum = minNum;
+        int sum = 0;
 
-        System.out.println("u listi postoji duplikat ? " + b);
+        lista.removeIf(broj -> broj.equals(finalMaxNum));
+        lista.removeIf(broj -> broj.equals(finalMinNum));
+
+        for (Integer i : lista) {
+            System.out.println(i);
+            sum += i;
+        }
+        double prosjek = (double) sum / lista.size();
+        System.out.println("Prosjek brojeva u novoj listi je " + prosjek);
     }
+
 }
