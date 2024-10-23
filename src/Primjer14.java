@@ -2,9 +2,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Primjer13 {
+public class Primjer14 {
     public static void main(String[] args) {
-
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("unesi velicinu liste ");
@@ -44,5 +43,4 @@ public class Primjer13 {
 
         System.out.println("u listi postoji duplikat ? " + b);
     }
-
 }
