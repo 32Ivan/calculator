@@ -27,6 +27,7 @@ public class primjer16 {
         for (int i = 1; i < lista.size(); i++) {
 
             if (lista.get(i) < lista.get(i - 1)) {
+                rezultat = false;
                 break;
             } else {
 
