@@ -21,6 +21,8 @@ public class DZ6 {
 
         System.out.println("Najveca rijec u recenici je : " + biggestWord(findBigWordsInSentence(sentence)));
 
+        System.out.println("Prosjecna duljina rijeci je : " + averageWordLength(sentence));
+
 
     }
 
@@ -49,5 +51,16 @@ public class DZ6 {
 
     }
 
+    private static double averageWordLength(String sentence) {
+
+        String[] split = sentence.split(" ");
+        int totalLength = 0;
+
+        for (String word : split) {
+            totalLength += word.length();
+        }
+
+        return split.length > 0 ? (double) totalLength / split.length : 0.0;
+    }
 
 }
