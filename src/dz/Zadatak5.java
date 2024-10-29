@@ -25,6 +25,7 @@ public class Zadatak5 {
 
         int minIndex = 0;
         int maxIndex = 0;
+
         int minNum = integerList.get(0);
         int maxNum = integerList.get(0);
 
@@ -41,7 +42,8 @@ public class Zadatak5 {
 
         integerList.set(minIndex, maxNum);
         integerList.set(maxIndex, minNum);
-        System.out.println("Najveci broj u listi je " + minNum + " ,najmanji broj u lisiti je " + maxNum);
+
+        System.out.println("Najveci broj u listi je " + maxNum + " ,najmanji broj u lisiti je " + minNum);
 
         System.out.println("Nova lista nakon zamjene najmanjeg i najvećeg broja:");
         for (Integer broj : integerList) {

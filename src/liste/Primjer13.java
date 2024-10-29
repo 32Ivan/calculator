@@ -31,8 +31,7 @@ public class Primjer13 {
                 if (integer.equals(trenutniBroj)) {
                     brojIstihBrojeva++;
                 }
-
-
+                
             }
             if (brojIstihBrojeva > brojPonavljanja) {
                 brojPonavljanja = brojIstihBrojeva;
