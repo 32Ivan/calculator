@@ -6,7 +6,6 @@ public class Polaznik {
     private String spol;
 
     public Polaznik() {
-
     }
 
     public Polaznik(String ime, String prezime) {
