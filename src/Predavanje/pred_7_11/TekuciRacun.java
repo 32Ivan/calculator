@@ -16,18 +16,5 @@ public class TekuciRacun extends Racun {
         setStanje(stanjeSaKamatom);
         return stanjeSaKamatom;
     }
-
-    @Override
-    public BigDecimal uplataNaRacun(int iznos) {
-        BigDecimal stanjeRacunaNakonUplate = getStanje().add(BigDecimal.valueOf(iznos));
-        setStanje(stanjeRacunaNakonUplate);
-        return stanjeRacunaNakonUplate;
-    }
-
-    @Override
-    public BigDecimal isplataSaRacuna(int iznos) {
-        BigDecimal stanjeRacunaNakonIsplate = getStanje().subtract(BigDecimal.valueOf(iznos));
-        setStanje(stanjeRacunaNakonIsplate);
-        return stanjeRacunaNakonIsplate;
-    }
+    
 }

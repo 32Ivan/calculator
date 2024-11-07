@@ -17,10 +17,18 @@ public abstract class Racun {
 
     public abstract BigDecimal obracunKamate();
 
-    public abstract BigDecimal uplataNaRacun(int iznos);
-
-    public abstract BigDecimal isplataSaRacuna(int iznos);
+    public BigDecimal uplataNaRacun(int iznos) {
+        BigDecimal stanjeRacunaNakonUplate = getStanje().add(BigDecimal.valueOf(iznos));
+        setStanje(stanjeRacunaNakonUplate);
+        return stanjeRacunaNakonUplate;
+    }
     
+    public BigDecimal isplataSaRacuna(int iznos) {
+        BigDecimal stanjeRacunaNakonIsplate = getStanje().subtract(BigDecimal.valueOf(iznos));
+        setStanje(stanjeRacunaNakonIsplate);
+        return stanjeRacunaNakonIsplate;
+    }
+
 
     public BigDecimal getStanje() {
         return stanje;
